@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para mi mejor amiga</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(90deg, #e66fbe, #5e31c7);
+    color: #333;
+    overflow-x: hidden;
+  }
+
+  /* CORAZONES */
+  .corazon {
+    position: fixed;
+    bottom: -10px;
+    font-size: 20px;
+    color: rgba(255,255,255,0.6);
+    animation: subir 6s linear infinite;
+  }
+
+  @keyframes subir {
+    0% {transform: translateY(0); opacity: 1;}
+    100% {transform: translateY(-100vh); opacity: 0;}
+  }
+
+  h1 {
+    text-align: center;
+    color: white;
+    margin: 30px 0;
+  }
+
+  /* CARRUSEL */
+  .carousel {
+    width: 90%;
+    max-width: 500px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+
+  .carousel img {
+    width: 100%;
+    display: none;
+  }
+
+  .carousel img.active {
+    display: block;
+  }
+
+  /* PERFIL */
+  .perfil {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 25px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .perfil img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ff6b81;
+  }
+
+  .contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    transition: 0.3s;
+  }
+
+  .card:hover {
+    transform: translateY(-10px);
+  }
+
+  .icono {
+    font-size: 28px;
+    color: #a18cd1;
+    margin-bottom: 10px;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 12px;
+    background: linear-gradient(45deg, #ff6b81, #a18cd1);
+    color: white;
+    cursor: pointer;
+  }
+
+  .carta {
+    display: none;
+    margin-top: 10px;
+  }
+</style>
+</head>
+
+<body>
+
+<h1><i class="bi bi-envelope-heart"></i> FELIZ CUMPLEAÑOS, PAU!!</h1>
+
+
+<!-- PERFIL -->
+ <div class="contenedor">
+<div class="perfil carousel">
+ 
+  <img src="./IMG/duki-desvela-motivo-que-tatuo-cara-como-traje-superheroe_104.webp" class="active">
+  <img src="./IMG/https___cloudfront-us-east-1.images.arcpublishing.com_lanacionpy_IZJTXUSOYFCD7AVDH7DNWU3EEE.avif">
+  <img src="./IMG/e3vpHO1mg_720x0__1.jpg">
+
+
+  <h2 style="color: #5a20e4;">Para: Mi Niña Hermosa</h2>
+  <h5 style="color: #e30dff;">
+    Este es un pequeño regalo para ti, lleno de cariño y detallitos de cosas que te gustan. Cada carta tiene un mensaje especial para momentos específicos y tambien pequeños recuerditos. 
+    <h5 style="color:#ff6b81">
+        <b>Instrucciones:</b> Abre cada carta solo cuando te sientas triste, me extrañes, quieras reír, no puedas dormir o necesites motivación. Cada una tiene un mensaje pensado para esos momentos.
+        Cada carta se desbloqueará en una fecha diferente, así que ten paciencia y espera el momento adecuado para abrirlas.
+  </h5>
+      <h5 style="color: #5a20e4;">
+Te quiero mucho, espero que te guste y te saque una sonrisa cada vez que la leas.
+  </h5>
+      <h5 style="color:#0932a5">
+        <b>Horario:</b> 
+        <li>Carta 1: 21 de marzo a las 00:00</li>
+        <li>Carta 2: 21 de marzo a las 01:00</li>
+        <li>Carta 3: 21 de marzo a las 07:00</li>
+        <li>Carta 4: 21 de marzo a las 08:00</li>
+        <li>Carta 5: 21 de marzo a las 09:00</li>
+      </h5>
+  <!-- <a href="https://open.spotify.com/intl-es/track/0XQsWXjHkSjLuSHnHB1qLL?si=ae291d9dc18f4329" target="_blank" class="btn-link">
+  <i class="bi bi-spotify"></i> Una canción para ti: "Te Extraño" de Duki
+</a> -->
+</div></div>
+<h1><i class="bi bi-envelope-heart"></i> Abre cuando...</h1>
+
+
+<!-- CARTAS -->
+<div class="contenedor">
+
+  <div class="card">
+    <div class="icono"><i class="bi bi-cloud-rain"></i></div>
+    <h3>Estés triste</h3>
+    <button onclick="verCarta('c1','2026-03-21T00:00:00')">Abrir</button>
+    <p id="c1" class="carta">Recuerda, siempre estoy aquí para ti. Aunque vivamos en paises diferentes, siempre estaré contigo. SIEMPRE tendrás a alguien que te quiera, que te apoye y que te comprenda.
+
+        Se que a veces la distancia puede hacer que te sientas sola o triste, pero quiero que sepas que no estás sola. Siempre puedes contar conmigo, para lo que necesites, para hablar, para reír, para llorar o simplemente para estar ahí.
+     
+        Eres una persona increíble, fuerte y valiente. 
+        Has superado tantas cosas, momentos dificiles, pero siempre has logrado salir adelante, espero siga siendo así, eres una increible persona y espero que recuerdes eso siempre y las personas a tu al rededor puedan ver lo increible que eres, no dejes que la tristeza te venza, recuerda que tienes un corazón enorme y una sonrisa que ilumina el mundo.
+             <img src="./IMG/e3vpHO1mg_720x0__1.jpg" alt="Auronplay" style="width: 100%; margin-top: 10px; border-radius: 15px;">
+    <a href="https://youtu.be/U6ue4-WcC_s?si=wDG5q5FSnsdEzrFR" target="_blank" class="btn-link">
+  <i class="bi bi-youtube"></i> Click aquí: Bonus
+</a>
+    
+    </p>
+</div>
+
+  <div class="card">
+    <div class="icono"><i class="bi bi-heart"></i></div>
+    <h3>Me extrañes</h3>
+    <button onclick="verCarta('c2','2026-03-21T01:00:00')">Abrir</button>
+    <p id="c2" class="carta">
+        Yo también te extraño muchísimo. Quisiera poder abrazarte 
+        y decirte que te quiero mucho en persona, 
+        si por mi fuera ya habria ido a verte miles pero miles de veces. Espero algun dia poder ir a verte 
+        y dejar la distancia aunque sea por un corto tiempo, pero poder abrazarte, chismear en persona, comer algo rico juntas, 
+        pasear juntas, y hacer muchisimas cosas juntas. Te mando miles de abrazos virtuales y recuerda que siempre estaré aquí para ti.
+    <img src="./IMG/https___cloudfront-us-east-1.images.arcpublishing.com_lanacionpy_IZJTXUSOYFCD7AVDH7DNWU3EEE.avif" alt="Auronplay" style="width: 100%; margin-top: 10px; border-radius: 15px;">
+
+<a href="https://open.spotify.com/intl-es/track/0XQsWXjHkSjLuSHnHB1qLL?si=ae291d9dc18f4329" target="_blank" class="btn-link">
+  <i class="bi bi-spotify"></i> Una canción para ti:
+</a>
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="icono"><i class="bi bi-emoji-smile"></i></div>
+    <h3>Quieras reír</h3>
+    <button onclick="verCarta('c3','2026-03-21T07:00:00')">Abrir</button>
+    <p id="c3" class="carta">
+        Estuve pensando en que podria decirte algo que te haga reír. 
+        Soy muy mala para eso, pero intentaré pensar en algo gracioso para ti. 
+        Te acuerdas cuando nos conocimos? Al principio no nos llevabamos bien, pero ahora somos mejores amigas. 
+        No se si te acuerdas de nuestro chat en discord, estuve revisando, 
+        y resulta que desde el 2022 perdimos la cuenta de con cuantos manes inmaduros has hablado jajaja, 
+        ni las nosotras de ese entonces sabian ahora menos, 
+        llevas una racha de un aproximado 5 años que perdimos la cuenta y puro nada que ver te llega jajajaj 
+        cuantos mas a esa lista se han agregado no lo sabremos ajajja Pero eso es algo que nadie más tiene que saber 
+        y buenos chismes nos trajo en su momento jajaj 
+             <img src="./IMG/duki-desvela-motivo-que-tatuo-cara-como-traje-superheroe_104.webp" alt="Auronplay" style="width: 100%; margin-top: 10px; border-radius: 15px;">
+   <a href="https://youtu.be/fFPfHIOlKPM?si=2qcfAK20cjsh4voZ" target="_blank" class="btn-link">
+  <i class="bi bi-youtube"></i> Click aquí: video de Auronplay para que te rias un rato
+</a>
+    </p>
+ 
+</div>
+
+  <div class="card">
+    <div class="icono"><i class="bi bi-moon"></i></div>
+    <h3>No puedas dormir</h3>
+    <button onclick="verCarta('c4','2026-03-21T08:00:00')">Abrir</button>
+    <p id="c4" class="carta">
+        Dato curioso: Dicen que cuando no puedes dormir o te da insomnio, 
+        es porque alguien te extraña o te esta pensando mucho. 
+        Toca hacernos unos limpia porque el sueño es necesario para no mandar todos a la m*****. 
+        Que dejen dormir, quienes se creen para andar quitando el sueño a las personas jajaja. 
+        Bueno, si no puedes dormir, recuerda que siempre estoy aquí para ti, aunque sea en la distancia, 
+        siempre puedes contar conmigo para hablar, para distraerte o simplemente para saber que alguien te quiere y te apoya. 
+        Espero que puedas descansar pronto y que tengas dulces sueños. 
+        Ojalá quien te piense tanto como para no dejarte dormir, este guapo. 
+     <img src="./IMG/500_333.jpeg" alt="Auronplay" style="width: 100%; margin-top: 10px; border-radius: 15px;">
+ 
+    </p>
+  
+</div>
+
+  <div class="card">
+    <div class="icono"><i class="bi bi-lightning"></i></div>
+    <h3>Necesites motivación</h3>
+    <button onclick="verCarta('c5','2026-03-21T09:00:00')">Abrir</button>
+    <p id="c5" class="carta">
+        Eres increíble y puedes con todo. Recuerda que siempre creo en ti
+         y que no hay nada que no puedas lograr si lo intentas con pasión y determinación. 
+         Se que eres capaz de lograr todo lo que te propongas. 
+         Eres una de las personas más fuertes que conozco, que sigue luchando por sus metas y por salir adelante.
+            <img src="./IMG/Auronplay-youtubers-500-ok.jpg" alt="Auronplay" style="width: 100%; margin-top: 10px; border-radius: 15px;">
+
+        </p>
+</div>
+
+</div>
+
+<script>
+function verCarta(id, fecha) {
+  const hoy = new Date();
+  const fechaPermitida = new Date(fecha);
+
+  if (hoy >= fechaPermitida) {
+    document.getElementById(id).style.display = "block";
+  } else {
+    alert("Aún no puedes abrir esta carta");
+  }
+}
+
+/* CARRUSEL AUTOMÁTICO */
+let index = 0;
+const images = document.querySelectorAll(".carousel img");
+
+setInterval(() => {
+  images[index].classList.remove("active");
+  index = (index + 1) % images.length;
+  images[index].classList.add("active");
+}, 3000);
+
+/* CORAZONES */
+setInterval(() => {
+  const corazon = document.createElement("div");
+  corazon.classList.add("corazon");
+  corazon.innerHTML = "❤";
+  corazon.style.left = Math.random() * 100 + "vw";
+  corazon.style.fontSize = (10 + Math.random() * 20) + "px";
+
+  document.body.appendChild(corazon);
+
+  setTimeout(() => {
+    corazon.remove();
+  }, 6000);
+}, 500);
+</script>
+
+</body>
+</html>
